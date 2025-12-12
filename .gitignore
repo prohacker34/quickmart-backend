@@ -1,0 +1,16 @@
+.env
+
+ Python cache
+__pycache__/
+*.pyc
+
+# Flask uploads
+uploads/
+
+# Migrations (optional)
+migrations/
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
