@@ -1,0 +1,44 @@
+# Using Thunder client
+ ## how to access protected routes
+ 1. copy and paste the url http://127.0.0.1:5000
+ 2. in the 'Body' use the JSON format to put in the users info e.g {
+  "username":"admin",
+  "password":"admin123"
+}
+ 3. login method= POST to get the access token
+
+ 4. after getting the access token copy and paste it into 'Headers'   have the header as  'Authorization' and value as 'Bearer <JWT Token> leave a space btn Bearer and JWT Token.
+
+ 5. change the method to 'GET' now you should be able to access the protected routes.
+ ## how to perform CRUD operations
+ 1. GET Copy and paste the url http://127.0.0.1:5000/products
+   - GET by id http://127.0.0.1:5000/products/1
+ 2. CREATE method=POST create an new product copy and paste the url http://127.0.0.1:5000/products
+ - In the 'Body' paste all the details of the product using the json fomat e.g{
+  "category": "laptop",
+  "featured": false,
+  "image_url": "https://www.saruk.co.ke/_next/image?url=https%3A%2F%2Fsaruk-web-images.s3.eu-north-1.amazonaws.com%2FLenovo-IdeaPad-1-14IAU7-Intel-Core-i5-12th-Gen-8GB-RAM-512GB-SSD-14-Inch-FHD-Display-1.jpg&w=640&q=75",
+  "name": "Lenovo IdeaPad 3 15IAU7",
+  "price": 379.99
+}
+ - press send.
+ - resopose should say {
+  "message": "Product created successfully!"
+}
+ 3. UPDATE method = PUT replace an entire record copy and paste the url with the id number of the product you want to update  http://127.0.0.1:5000/products/2
+    In the 'Body' paste all the details  using the JSON formart e.g {
+  "category": "Kit",
+  "featured": false,
+  "id": 2,
+  "image_url": "https://example.com/images/mug.jpg",
+  "name": "Mug",
+  "price": 10.5
+} you can modify the values of the keys i.e category- key "kit"-value
+- press send
+- Response should say {"message":"product updated successfully!"}
+
+4.Delete method Delete
+
+Enter URL with a specific id http://127.0.0.1:5000/products/2
+
+Click Send
