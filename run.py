@@ -1,7 +1,13 @@
 import os
 from app import create_app, db
+from flask_cors import CORS   # <<<<< import CORS
 
 app = create_app()
+
+# Enable CORS for the whole app
+CORS(app, resources={r"/*": {"origins": "*"}})  # <<<<< allow all origins
+# OR limit to your frontend
+# CORS(app, resources={r"/*": {"origins": "https://your-frontend-url.com"}})
 
 with app.app_context():
     try:

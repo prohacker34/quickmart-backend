@@ -9,7 +9,7 @@ with app.app_context():
     admin = Admin.query.filter_by(username="admin").first()
     if not admin:
         admin = Admin(username="admin")
-        admin.set_password("admin123")  # change this later for security
+        admin.set_password("Oyaore123")  # change this later for security
         db.session.add(admin)
         db.session.commit()
         print("Admin created!")
